@@ -1,5 +1,8 @@
 object galvan{
 	var sueldo = 15000
+	var deuda = 0
+	var dinero = 0
+	var ultimoGasto = 0
 	
 	method sueldo(){
 		return sueldo
@@ -14,9 +17,42 @@ object galvan{
 	}
 	
 	method totalCobrado(){
+		dinero = sueldo
+	}
+	
+	method deuda(){
+		return deuda
+	}
+	
+	method dinero(){
+		return dinero
+	}
+
+	
+	method gastarDinero(cantidad){
+		
+		if(cantidad < dinero){
+				ultimoGasto = dinero - cantidad
+			}
+			else{
+				ultimoGasto = (dinero - cantidad).abs()
+				deuda += ultimoGasto.abs()
+				dinero = 0
+			}
+		}
+		
+	method pagarDeudas(){
+		if(dinero >= deuda){
+			dinero = dinero - deuda
+			deuda = 0
+			}
+			else{
+				deuda = deuda - dinero
+				dinero = 0
+			}
+		}
 		
 	}
-}
 
 object baigorria{
 	
@@ -49,6 +85,7 @@ object gimenez{
 	var fondoParaSueldos = 300000
 	
 	method pagoDeSueldo(empleado){
+		
 		empleado.sueldoACobrar()
 		fondoParaSueldos -= empleado.sueldo()
 		empleado.totalCobrado()
