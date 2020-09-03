@@ -8,12 +8,8 @@ object galvan{
 		return sueldo
 	}
 	
-	method actualizacionDeSueldo(sueldoActualizado){
-		sueldo = sueldoActualizado
-	}
-	
-	method sueldoACobrar(){
-		
+	method sueldo(_sueldo){
+		sueldo = _sueldo
 	}
 	
 	method totalCobrado(){
@@ -26,6 +22,10 @@ object galvan{
 	
 	method dinero(){
 		return dinero
+	}
+	
+	method sueldoACobrar(){
+		
 	}
 
 	
@@ -74,7 +74,6 @@ object baigorria{
 	
 	method totalCobrado(){
 		totalCobrado += sueldo
-		sueldo = 0
 		cantidadDeVentas = 0
 	}
 	
@@ -89,6 +88,10 @@ object gimenez{
 		empleado.sueldoACobrar()
 		fondoParaSueldos -= empleado.sueldo()
 		empleado.totalCobrado()
+	}
+	
+	method fondo(){
+		return fondoParaSueldos
 	}
 }
 	
