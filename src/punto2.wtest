@@ -5,11 +5,11 @@ test "Qué hacen los empleados con lo que cobran" {
   baigorria.empanadasVendidas(500)
   galvan.sueldo(20000)
   baigorria.empanadasVendidas(300)
-  gimenez.pagoDeSueldo(baigorria)
-  gimenez.pagoDeSueldo(galvan)
+  gimenez.pagarSueldo(baigorria)
+  gimenez.pagarSueldo(galvan)
   
   baigorria.empanadasVendidas(100)
-  gimenez.pagoDeSueldo(baigorria)
+  gimenez.pagarSueldo(baigorria)
   assert.equals(13500, baigorria.totalCobrado())
   
  	

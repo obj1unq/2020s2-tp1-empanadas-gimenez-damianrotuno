@@ -86,10 +86,10 @@ object gimenez{
 	
 	var fondoParaSueldos = 300000
 	
-	method pagoDeSueldo(empleado){
+	method pagarSueldo(empleado){
 		
-		empleado.sueldoACobrar()
-		fondoParaSueldos -= empleado.sueldo()
+		fondoParaSueldos -= empleado.sueldoACobrar()
+		empleado.totalCobrado()
 	}
 	
 	method fondo(){
