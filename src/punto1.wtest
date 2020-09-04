@@ -7,6 +7,7 @@ test "punto1: Planteo inicial" {
   baigorria.empanadasVendidas(300)
   gimenez.pagoDeSueldo(baigorria)
   gimenez.pagoDeSueldo(galvan)
+  
   assert.equals(12000, baigorria.sueldo())
   assert.equals(20000, galvan.sueldo())
   assert.equals(268000, gimenez.fondo())
